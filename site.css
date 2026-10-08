@@ -1,0 +1,94 @@
+/* Smile Project site: sunny yellow and marigold from the app, warm ink, one rounded display face.
+   Layout: a wide two-column hero, then alternating screenshot rows; legal pages are one readable column. */
+:root {
+  --paper: #fffbef;
+  --card: #ffffff;
+  --ink: #2b2010;
+  --muted: #6f5f43;
+  --line: #f1e3bd;
+  --sun: #ffcc40;
+  --marigold: #e88f0c;
+  --marigold-ink: #ffffff;
+  --glow: #fff1c4;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Figtree", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1a150c; --card: #241d11; --ink: #fff3d3; --muted: #cdbb90; --line: #3a301d;
+    --sun: #ffcc40; --marigold: #ffad33; --marigold-ink: #2b2010; --glow: #33290f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1a150c; --card: #241d11; --ink: #fff3d3; --muted: #cdbb90; --line: #3a301d;
+  --sun: #ffcc40; --marigold: #ffad33; --marigold-ink: #2b2010; --glow: #33290f;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding-inline: 20px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--marigold); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.08; text-wrap: balance; margin: 0; }
+.wrap { max-width: 1080px; margin-inline: auto; }
+
+/* top bar */
+.bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding-block: 18px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 800 20px/1 var(--display); }
+.brand img { width: 36px; height: 36px; }
+.bar nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px; }
+.bar nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.bar nav a:hover, .bar nav a[aria-current="page"] { color: var(--ink); }
+
+/* App Store button */
+.store {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 20px 12px 16px; border-radius: 14px;
+  background: var(--ink); color: var(--paper); text-decoration: none;
+  font: 700 16px/1.1 var(--body);
+}
+.store svg { width: 22px; height: 22px; fill: currentColor; }
+.store small { display: block; font-size: 11px; font-weight: 500; opacity: 0.8; }
+.store:hover { text-decoration: none; transform: translateY(-1px); }
+
+/* footer */
+.foot {
+  display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center;
+  margin-top: 72px; padding-block: 28px 40px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 14px;
+}
+.foot nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.foot a { color: var(--muted); font-weight: 600; text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+
+/* legal pages */
+.legal { max-width: 68ch; margin-inline: auto; padding-block: 24px 0; }
+.legal h1 { font-size: clamp(34px, 6vw, 48px); font-weight: 800; }
+.legal .meta { color: var(--muted); font-size: 15px; margin: 12px 0 28px; }
+.legal .summary { padding: 18px 20px; border-radius: 16px; background: var(--glow); }
+.legal .summary ul { margin: 6px 0 0; padding-left: 20px; }
+.legal h2 { font-size: 22px; font-weight: 700; margin-top: 40px; }
+.legal h3 { font-size: 17px; font-weight: 700; margin-top: 22px; font-family: var(--body); }
+.legal p, .legal li { color: var(--ink); }
+.legal li + li { margin-top: 6px; }
+.legal table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+.legal th { font-weight: 700; white-space: nowrap; }
+.table-scroll { overflow-x: auto; margin-top: 12px; }
+.todo { background: var(--sun); color: #2b2010; padding: 1px 6px; border-radius: 5px; font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
