@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About My Smile Project</title>
+<meta name="description" content="My Smile Project is dedicated to creating happiness, one smile at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="img/flower.png">
+<style>
+  .about { max-width: 68ch; margin-inline: auto; padding-block: 24px 0; }
+  .about-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; }
+  .about h1 { font-size: clamp(38px, 6.5vw, 60px); font-weight: 800; letter-spacing: -0.02em; }
+  .about-head img { width: clamp(84px, 16vw, 132px); height: auto; transform: rotate(10deg); }
+  .mission { font: 600 clamp(21px, 2.6vw, 25px)/1.4 var(--display); margin: 18px 0 0; max-width: 36ch; }
+  .declaration { margin: 44px 0 36px; padding: 26px clamp(20px, 4vw, 34px); border-radius: 22px; background: var(--glow); }
+  .declaration blockquote { margin: 0; font: 500 clamp(19px, 2.3vw, 22px)/1.5 var(--display); }
+  .declaration blockquote::before { content: "“"; display: block; height: 0.55em; font-size: 2.6em; line-height: 1; color: var(--marigold); }
+  .declaration figcaption { margin-top: 14px; color: var(--muted); font-size: 15px; }
+  .about p { margin: 0 0 18px; }
+  .about .smile-word { font-weight: 800; color: var(--marigold); letter-spacing: 0.04em; }
+  .signature { margin: 30px 0 0; padding-top: 22px; border-top: 1px solid var(--line); display: grid; gap: 2px; }
+  .signature b { font: 700 22px/1.2 var(--display); }
+  .signature span { color: var(--muted); }
+  .talks { margin-top: 48px; }
+  .talks h2 { font-size: 24px; font-weight: 800; margin-bottom: 14px; }
+  .talk-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .talk { display: grid; gap: 4px; padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line); background: var(--card); color: var(--ink); text-decoration: none; }
+  .talk:hover { border-color: var(--marigold); }
+  .talk small { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .talk b { font: 700 19px/1.3 var(--display); }
+  .talk span { color: var(--marigold); font-weight: 600; font-size: 15px; }
+  .closing { margin-top: 56px; text-align: center; display: grid; justify-items: center; gap: 6px; }
+  .closing b { font: 800 clamp(26px, 4vw, 36px)/1.1 var(--display); }
+  .closing span { color: var(--muted); font-size: 18px; }
+  @media (max-width: 560px) { .talk-list { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <a class="brand" href="index.html"><img src="img/flower.png" alt="" width="36" height="36">Smile Project</a>
+    <nav aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main class="about">
+    <div class="about-head">
+      <h1>About My Smile Project</h1>
+      <img src="img/flower.png" alt="">
+    </div>
+    <p class="mission">My Smile Project is dedicated to creating happiness, one smile at a time.</p>
+
+    <figure class="declaration">
+      <blockquote>We hold these truths to be sacred &amp; undeniable; that all men are created equal &amp; independent, that from that equal creation they derive rights inherent &amp; inalienable, among which are the preservation of life, &amp; liberty, &amp; the pursuit of happiness.</blockquote>
+      <figcaption>From Thomas Jefferson's original draft of the US Declaration of Independence, 1776</figcaption>
+    </figure>
+
+    <p>Finding happiness is a pursuit common to all of us. The lucky ones, natural optimists, find happiness easily. For others, myself included, it is a challenging endeavor.</p>
+    <p>Countless theories, practices, and products promise to make you happy. I've tried a lot of them. Many of them work. However, the easiest, fastest, and most effective one is to just <span class="smile-word">SMILE!</span></p>
+    <p>Like any activity, to be proficient one must practice frequently to develop expertise and “muscle” memory.</p>
+    <p>Inspired by TED talks given by Ron Gutman and David Steindl-Rast, I started this project to help those of us who have a tendency to see the glass half empty: to remind ourselves to stop, smile, be grateful and be happy.</p>
+
+    <div class="signature">
+      <b>Smiley</b>
+      <span>Founder, My Smile Project</span>
+      <a href="mailto:smilesprojectorg@gmail.com">smilesprojectorg@gmail.com</a>
+    </div>
+
+    <section class="talks" aria-labelledby="talks-title">
+      <h2 id="talks-title">The talks that inspired it</h2>
+      <div class="talk-list">
+        <a class="talk" href="https://www.ted.com/talks/ron_gutman_the_hidden_power_of_smiling" rel="noopener">
+          <small>Ron Gutman</small>
+          <b>The Hidden Power of Smiling</b>
+          <span>Watch on TED</span>
+        </a>
+        <a class="talk" href="https://www.ted.com/talks/david_steindl_rast_want_to_be_happy_be_grateful" rel="noopener">
+          <small>David Steindl-Rast</small>
+          <b>Want to be happy? Be grateful.</b>
+          <span>Watch on TED</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="closing">
+      <b>My Smile Project</b>
+      <span>Happiness, one smile at a time.</span>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Taian, LLC. All rights reserved.</span>
+    <nav aria-label="Legal">
+      <a href="about.html" aria-current="page">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms and Conditions</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
